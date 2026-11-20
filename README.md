@@ -24,13 +24,17 @@ PC C#/.Net project to send YouTube chat messages to an Amiga via serial link, wh
 * Google.Apis.YouTube.v3
 * EmojiToText
 
-# Amiga/CLI/getspeak
+# Getting the Amiga to "say" Chat messages (optional)
 
-* Amiga OS 3.0 and later didn't come with the say program. This is the Amiga CLI script I used to copy say program from a workbench 2.0 disk onto an Amiga 1200 with Amiga OS 3.2
-
-# Amiga/NComm/speak.script (optional)
+## Amiga/NComm/speak.script
 
 This is the NComm script used to get NComm to speak Amiga say commands.
+
+## Amiga/CLI/getspeak
+
+Amiga OS 3.0 and later didn't come with the say program. 
+
+This is the Amiga CLI script I used to copy say program from a workbench 2.0 disk onto an Amiga 1200 with Amiga OS 3.2
 
 # Links
 
