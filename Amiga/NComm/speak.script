@@ -1,0 +1,25 @@
+;NComm script to speak commands that come in from the PC via serial (from YouTube chat), using the "say" 
+;program launched in a CLI script
+;v1.02
+
+MESSAGE "ncomm script to listen for lines starting with /say\n\r"
+MESSAGE "and sending them to the Amgia CLI say command to\n\r"
+MESSAGE "be read out load.\n\r"
+
+label:
+INPUT $line "\n\r"	;Input will be placed in the variable 'say'
+           		;until carriage return is received.
+STRLEN $linelen $line
+IF $linelen == "0" THEN GOTO end
+IF $linelen == "1" THEN GOTO end
+IF $linelen == "2" THEN GOTO end
+IF $linelen == "3" THEN GOTO end
+IF $linelen == "4" THEN GOTO end
+STRPART $startsaycommand 0 4 $line
+SET $linelen = $linelen-"4"#
+STRPART $texttosay 4 $linelen $line
+IF $startsaycommand == "/say" THEN CLI "sys:Utilities/say -p140 "$texttosay
+
+end:
+SET $line = ""
+GOTO label

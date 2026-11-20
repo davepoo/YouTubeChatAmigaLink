@@ -1,0 +1,5 @@
+copy df0:utilities/say sys:utilities/ CLONE
+copy df0:devs/narrator.device sys:devs/
+copy df0:libs/translator.library sys:libs/
+copy df0:L/speak-handler sys:L/
+
