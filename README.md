@@ -13,6 +13,8 @@ PC C#/.Net project to send YouTube chat messages to an Amiga via serial link, wh
 
 # YouTubeAmigaChat.cs
 
+This is the main program that runs on the PC, it connects to the YouTube API and retreives chat messages, reformats them, and then sends them via the serial port to the Amiga.
+
 * Converts the chat into extended ASCII so it can be displayed on the Amiga reasonably well.
 * Converts Emojis into text because the Amiga can't display them
 * YouTube chat can use commands starting with / to create ANSI escape codes .e.g. /r red text /b blue text
